@@ -1,20 +1,16 @@
-NAME = ft_printf.a
+NAME = libftprintf.a
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printf.c
+SRCS = ft_printf.c put_vars.c
 OBJS = $(SRCS:.c=.o)
-LIB = ./libft/libft.a
 
-all: $(NAME)
-
-$(NAME): $(LIB) $(OBJS)
-	ar rcsT $@ $^ $(LIB)
+$(NAME): $(OBJS)
+	ar rcs $@ $^
 
 %.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIB):
-	make -C ./libft
+all: $(NAME)
 
 clean:
 	rm -f $(OBJS)

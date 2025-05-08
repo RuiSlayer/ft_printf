@@ -6,7 +6,7 @@
 /*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 18:28:15 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/07 22:37:14 by rucosta          ###   ########.fr       */
+/*   Updated: 2025/05/08 20:34:14 by rucosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 # include <stdarg.h>
 # include <stdint.h>
 
-void		put_pointer(void *ptr);
-void		put_hex(unsigned int n, int uppercase);
-void		put_unsigned(unsigned int n);
-void		put_int(int n);
-static char	is_in_set(const char *ptr, int pos);
-static void	print_var(char c, va_list args);
+int			ft_putchar(char c);
+int			ft_putstr(char *s);
+int			put_pointer(void *ptr);
+int			put_hex(unsigned int n, int uppercase);
+int			put_unsigned(unsigned int n);
+int			put_int(int n);
 int			ft_printf(const char *ptr, ...);
 #endif
