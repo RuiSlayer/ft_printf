@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:38:36 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/08 20:26:56 by rucosta          ###   ########.fr       */
+/*   Updated: 2025/05/12 21:04:13 by ruislayer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "printf.h"
 
 static int	print_var(char c, va_list args)
@@ -45,7 +46,7 @@ int	ft_printf(const char *ptr, ...)
 	va_start(args, ptr);
 	while (ptr[i])
 	{
-		if (ptr[i] == '%')
+		if (ptr[i] == '%' && ptr[i + 1])
 		{
 			count += print_var(ptr[i + 1], args);
 			i += 2;
@@ -56,4 +57,60 @@ int	ft_printf(const char *ptr, ...)
 	}
 	va_end(args);
 	return (count);
+}
+
+int main(void)
+{
+    int ret_std, ret_ft;
+    char *str = "world";
+    int num = 42;
+    unsigned int u = 3000000000;
+    void *ptr = str;
+
+    // Test 1: Characters
+    ret_std = printf("1. Std: Hello %c\n", 'A');
+    ret_ft = ft_printf("1. Ft : Hello %c\n", 'A');
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 2: Strings
+    ret_std = printf("2. Std: Hello %s\n", str);
+    ret_ft = ft_printf("2. Ft : Hello %s\n", str);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 3: Pointers
+    ret_std = printf("3. Std: Pointer %p\n", ptr);
+    ret_ft = ft_printf("3. Ft : Pointer %p\n", ptr);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 4: Decimal and Integer
+    ret_std = printf("4. Std: Number %d and %i\n", num, -num);
+    ret_ft = ft_printf("4. Ft : Number %d and %i\n", num, -num);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 5: Unsigned
+    ret_std = printf("5. Std: Unsigned %u\n", u);
+    ret_ft = ft_printf("5. Ft : Unsigned %u\n", u);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 6: Hex lowercase
+    ret_std = printf("6. Std: Hex lowercase %x\n", 305441741);
+    ret_ft = ft_printf("6. Ft : Hex lowercase %x\n", 305441741);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 7: Hex uppercase
+    ret_std = printf("7. Std: Hex uppercase %X\n", 305441741);
+    ret_ft = ft_printf("7. Ft : Hex uppercase %X\n", 305441741);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 8: Percent sign
+    ret_std = printf("8. Std: Show 100%% success\n");
+    ret_ft = ft_printf("8. Ft : Show 100%% success\n");
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    // Test 9: NULL string
+    ret_std = printf("9. Std: Null string: %s\n", (char *)NULL);
+    ret_ft = ft_printf("9. Ft : Null string: %s\n", (char *)NULL);
+    printf("Return - Std: %d | Ft: %d\n\n", ret_std, ret_ft);
+
+    return 0;
 }

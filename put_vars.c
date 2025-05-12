@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   put_vars.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 22:15:35 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/08 20:25:39 by rucosta          ###   ########.fr       */
+/*   Updated: 2025/05/12 21:05:15 by ruislayer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_putstr(char *s)
 	int	i;
 
 	if (!s)
-		return (ft_putstr("(nil)"));
+		return (ft_putstr("(null)"));
 	i = 0;
 	while (s[i] != '\0')
 	{
