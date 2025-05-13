@@ -6,7 +6,7 @@
 /*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 22:15:35 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/12 21:05:15 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/05/13 18:06:22 by ruislayer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,8 @@ int	put_pointer(void *ptr)
 	char		*base;
 
 	address = (uintptr_t)ptr;
-	ft_putstr("0x");
 	if (address == 0)
-		return (ft_putstr("(null)"));
+		return (ft_putstr("(nil)"));
 	i = 0;
 	base = "0123456789abcdef";
 	while (address)
@@ -53,6 +52,7 @@ int	put_pointer(void *ptr)
 		address /= 16;
 	}
 	size = i;
+	ft_putstr("0x");
 	while (i--)
 		ft_putchar(buf[i]);
 	return (size + 2);
@@ -71,7 +71,7 @@ int	put_hex(unsigned int n, int uppercase)
 	else
 		base = "0123456789abcdef";
 	if (n == 0)
-		return (ft_putchar(buf[i]));
+		return (ft_putchar('0'));
 	while (n)
 	{
 		buf[i++] = base[n % 16];
@@ -87,6 +87,7 @@ int	put_unsigned(unsigned int n)
 {
 	char	buf[10];
 	int		i;
+	int		size;
 
 	i = 0;
 	if (n == 0)
@@ -96,7 +97,10 @@ int	put_unsigned(unsigned int n)
 		buf[i++] = (n % 10) + '0';
 		n /= 10;
 	}
-	return (ft_putstr(buf));
+	size = i;
+	while (i--)
+		ft_putchar(buf[i]);
+	return (size);
 }
 
 int	put_int(int n)
