@@ -6,17 +6,11 @@
 /*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 22:15:35 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/13 18:06:22 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/05/13 18:59:29 by ruislayer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
-int	ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return (1);
-}
 
 int	ft_putstr(char *s)
 {

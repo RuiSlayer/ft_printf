@@ -6,12 +6,18 @@
 /*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:38:36 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/13 18:07:13 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/05/13 19:01:46 by ruislayer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "printf.h"
+
+int	ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (1);
+}
 
 static int	print_var(char c, va_list args)
 {
