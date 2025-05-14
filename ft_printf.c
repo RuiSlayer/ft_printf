@@ -6,7 +6,7 @@
 /*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:38:36 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/13 19:01:46 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/05/14 22:58:23 by ruislayer        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ static int	print_var(char c, va_list args)
 		return (put_hex(va_arg(args, unsigned int), 1));
 	else if (c == '%')
 		return (ft_putchar('%'));
-	else
-		return (ft_putchar(c));
+	return (0);
 }
 
 int	ft_printf(const char *format, ...)
