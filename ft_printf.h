@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 18:28:15 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/13 18:59:00 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/05/27 18:47:53 by rucosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <stddef.h>
 # include <fcntl.h>
 # include <unistd.h>
