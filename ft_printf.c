@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:38:36 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/14 22:58:23 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/06/05 17:39:59 by rucosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

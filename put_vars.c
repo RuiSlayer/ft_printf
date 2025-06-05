@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   put_vars.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ruislayer <ruislayer@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 22:15:35 by rucosta           #+#    #+#             */
-/*   Updated: 2025/05/13 18:59:29 by ruislayer        ###   ########.fr       */
+/*   Updated: 2025/06/05 17:40:27 by rucosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putstr(char *s)
 {
