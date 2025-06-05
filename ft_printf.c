@@ -6,7 +6,7 @@
 /*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:38:36 by rucosta           #+#    #+#             */
-/*   Updated: 2025/06/05 17:39:59 by rucosta          ###   ########.fr       */
+/*   Updated: 2025/06/05 18:38:08 by rucosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	ft_printf(const char *format, ...)
 	int		i;
 	int		count;
 
+	if (!format)
+		return (-1);
 	i = 0;
 	count = 0;
 	va_start(args, format);
