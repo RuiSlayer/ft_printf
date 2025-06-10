@@ -6,7 +6,7 @@
 /*   By: rucosta <rucosta@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 17:38:36 by rucosta           #+#    #+#             */
-/*   Updated: 2025/06/05 18:42:54 by rucosta          ###   ########.fr       */
+/*   Updated: 2025/06/10 19:23:34 by rucosta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,3 +64,58 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+/* int main()
+{
+	int x = 10;
+	int *ptr = &x;
+	char *str = NULL;
+	int a = ft_printf(NULL);
+
+	
+	ft_printf("ft_printf:%c", 'a');
+    printf("\n");
+	printf("printf %c", 'a');
+	printf("\n");
+    ft_printf("ft_printf:%s", "ola");
+    printf("\n");
+	printf("printf %s", "ola");
+	printf("\n");
+    ft_printf("ft_printf:%d", -123);
+    printf("\n");
+	printf("printf %d", -123);
+	printf("\n");
+    ft_printf("ft_printf:%i", 123);
+    printf("\n");
+	printf("printf %i",123);
+	printf("\n");
+    ft_printf("ft_printf:%u", -1);
+	printf("\n");
+	printf("printf %u", -1);
+    printf("\n");
+    ft_printf("ft_printf: %x", 255);
+    printf("\n");
+	printf("printf : %x", 255);
+	printf("\n");
+    ft_printf("ft_printf:%X", 255);
+    printf("\n");
+	printf("printf:%X", 255);
+	printf("\n");
+    ft_printf("ft_printf:%%");
+    printf("\n");
+	printf("printf %%");
+	printf("\n");
+	printf("pritnf:%p", ptr);
+	printf("\n");
+	ft_printf("ft_pritnf:%p", ptr);
+	printf("\n");
+	printf("printf%s", str);
+	printf("\n");
+	ft_printf("ft_printf:%s", str);
+	printf("\n");
+    ft_printf("ft_print ptr = %p", NULL);
+    printf("\n");
+    printf(" printf ptr =  %p", NULL);
+    printf("\n");
+	ft_printf("%d", a);
+    return 0;
+} */
